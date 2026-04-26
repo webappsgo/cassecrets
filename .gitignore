@@ -1,0 +1,49 @@
+# gitignore default template
+# Disable reminder in prompt
+ignoredirmessage
+
+# ignore .build_failed files
+**/.build_failed*
+
+# OS generated files
+### Linux ###
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+### macOS ###
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+
+# Build artifacts
+binaries/
+releases/
+rootfs/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*

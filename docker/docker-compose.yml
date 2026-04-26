@@ -1,0 +1,25 @@
+name: cassecrets
+
+services:
+  cassecrets:
+    image: ghcr.io/casapps/cassecrets:latest
+    container_name: cassecrets
+    restart: unless-stopped
+    environment:
+      # Hardcoded with sane defaults - NO .env files
+      # Tor auto-enabled (tor binary installed in image)
+      - MODE=production
+      - TZ=America/New_York
+    ports:
+      # Production: bound to Docker bridge only
+      - "172.17.0.1:64580:80"
+    volumes:
+      - ./rootfs/config/cassecrets:/config
+      - ./rootfs/data/cassecrets:/data
+    networks:
+      - cassecrets
+
+networks:
+  cassecrets:
+    name: cassecrets
+    external: false

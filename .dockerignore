@@ -1,0 +1,14 @@
+.git
+.github
+.gitea
+.gitignore
+.dockerignore
+binaries
+releases
+rootfs
+*.md
+!LICENSE.md
+Jenkinsfile
+Makefile
+go.sum
+tests
